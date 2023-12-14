@@ -1,0 +1,159 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+
+    var selection = CurrentPage.Children;
+
+    if (CurrentPage.Parent == null) //From HomePage
+    {
+        var About = CurrentPage.Children[1];
+        var AboutCompanyPage = About.Children[0];
+        selection = AboutCompanyPage.Children;
+    }
+    else if (CurrentPage.Name == "Home") //From HomePage
+    {
+        var About = CurrentPage.Parent.Children[1];
+        var AboutCompanyPage = About.Children[0];
+        selection = AboutCompanyPage.Children;
+    }
+    else if (CurrentPage.Name == "About") //mainMenu
+    {
+        var AboutCompanyPage = CurrentPage.Children[0];
+        selection = AboutCompanyPage.Children;
+    }
+    else if (CurrentPage.Parent.Name == "About") // mainMenu - children
+    {
+        var AboutCompanyPage = CurrentPage.Parent.Children[0];
+        selection = AboutCompanyPage.Children;
+    }
+}
+    
+
+
+<!-- team-section
+  ================================================== -->
+<div id="TeamSection">
+    <div id="exactline"></div><br /><br />
+    
+    <section class="team-section" style="direction:ltr;">
+        <div class="container">
+
+            <div class="team-box owl-wrapper">
+                @if (CurrentPage.Name == "OurTeam")
+                {
+                    <div class="aboutTeamTitle">@CurrentPage.Title</div><br /><br />
+                }
+                <div class="owl-carousel" data-num="3">
+                    
+                    @if (selection.Any())
+                    {
+                        foreach (var item in selection)
+                        {
+                                <div class="item team-post">
+                                    <div class="gallery-team">
+                                        <img src=@Umbraco.Media(item.MemberImage).url alt="">
+
+                                        <ul class="social-list">
+                                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="team-content">
+                                        <h2>@item.MenberName</h2>
+                                        <span>@item.Profession</span>
+                                        <p>@item.MemberDescription</p>
+                                    </div>
+
+                                </div>
+
+                                @*<div class="item team-post">
+                                    <div class="gallery-team">
+                                        <img src="/upload/team/2.jpg" alt="">
+
+                                        <ul class="social-list">
+                                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="team-content">
+                                        <h2>John Smith</h2>
+                                        <span>Architect</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="item team-post">
+                                    <div class="gallery-team">
+                                        <img src="/upload/team/3.jpg" alt="">
+
+                                        <ul class="social-list">
+                                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="team-content">
+                                        <h2>Kenan Januzi</h2>
+                                        <span>Krye shef</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="item team-post">
+                                    <div class="gallery-team">
+                                        <img src="/upload/team/4.jpg" alt="">
+
+                                        <ul class="social-list">
+                                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="team-content">
+                                        <h2>Pajazit Hallaqi</h2>
+                                        <span>Puntor shpine</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+
+                                </div>
+
+                                <div class="item team-post">
+                                    <div class="gallery-team">
+                                        <img src="/upload/team/5.jpg" alt="">
+
+                                        <ul class="social-list">
+                                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="team-content">
+                                        <h2>Qaush Qaushi</h2>
+                                        <span>Qon ron</span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    </div>
+
+                                </div>*@
+                        }
+                    }
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End team section -->
+</div>

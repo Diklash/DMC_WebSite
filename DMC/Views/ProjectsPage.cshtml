@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ProjectsPage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "InnerPage.cshtml";
+}
+	<div>
+    <!-- portfolio-section
+            ================================================== -->
+    <section class="portfolio-section">
+        <div class="container">
+            <ul class="filter">
+                <li><a class="active" href="#" data-filter="*"><i class="fa fa-th-list"></i> All</a></li>
+                <li><a href="#" data-filter=".buildings">Buildings</a></li>
+                <li><a href="#" data-filter=".interior">Interior</a></li>
+                <li><a href="#" data-filter=".construction">Construction</a></li>
+            </ul>
+            <div class="portfolio-box iso-call">
+                @{ Html.RenderPartial("ProjectGalleryItem"); }
+            </div>
+        </div>
+    </section>
+    <!-- End portfolio section -->
+</div>

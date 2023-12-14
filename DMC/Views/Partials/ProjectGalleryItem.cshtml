@@ -1,0 +1,33 @@
+﻿@*@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ProjectGalleryItem>*@
+
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var selection = CurrentPage.Children;
+
+    if (CurrentPage.Parent == null) //From HomePage
+    {
+        var Project = CurrentPage.Children[2];   
+        selection = Project.Children;
+    }
+
+
+}
+
+@if (selection.Any())
+{
+    foreach (var item in selection)
+    {
+        <div class="project-post @item.Category">
+            <div class="project-gallery">
+                <img src=@Umbraco.Media(item.Image1).url alt="">
+                <div class="hover-box">
+                    <div class="inner-hover">
+                        <h2><a href=@item.Url>@item.Title</a></h2>
+                        <span>@item.Category</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+}

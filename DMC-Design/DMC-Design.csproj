@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{43232D44-E61B-40FE-BBD3-5318AA74037F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DMC_Design</RootNamespace>
+    <AssemblyName>DMC-Design</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Template\about.html" />
+    <Content Include="Template\blog.html" />
+    <Content Include="Template\buildings.html" />
+    <Content Include="Template\contact.html" />
+    <Content Include="Template\css\bootstrap.min.css" />
+    <Content Include="Template\css\font-awesome.css" />
+    <Content Include="Template\css\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template\css\jquery.bxslider.css" />
+    <Content Include="Template\css\owl.carousel.css" />
+    <Content Include="Template\css\owl.theme.css" />
+    <Content Include="Template\css\right-to-left.css" />
+    <Content Include="Template\css\settings.css" />
+    <Content Include="Template\css\style.css" />
+    <Content Include="Template\energy.html" />
+    <Content Include="Template\garden.html" />
+    <Content Include="Template\images\bx_loader.gif" />
+    <Content Include="Template\images\clients\client1.png" />
+    <Content Include="Template\images\clients\client2.png" />
+    <Content Include="Template\images\clients\client3.png" />
+    <Content Include="Template\images\clients\client4.png" />
+    <Content Include="Template\images\clients\client5.png" />
+    <Content Include="Template\images\clients\client6.png" />
+    <Content Include="Template\images\clients\client7.png" />
+    <Content Include="Template\images\clients\client8.png" />
+    <Content Include="Template\images\dummy.png" />
+    <Content Include="Template\images\logo.png" />
+    <Content Include="Template\images\marker.png" />
+    <Content Include="Template\images\revolution-icons\bullet.png" />
+    <Content Include="Template\images\revolution-icons\large_left.png" />
+    <Content Include="Template\images\revolution-icons\large_right.png" />
+    <Content Include="Template\images\revolution-icons\loader.gif" />
+    <Content Include="Template\images\revolution-icons\small_left.png" />
+    <Content Include="Template\images\revolution-icons\small_right.png" />
+    <Content Include="Template\images\revolution-icons\timer.png" />
+    <Content Include="Template\index.html" />
+    <Content Include="Template\js\bootstrap.min.js" />
+    <Content Include="Template\js\gmap3.min.js" />
+    <Content Include="Template\js\jquery.appear.js" />
+    <Content Include="Template\js\jquery.bxslider.min.js" />
+    <Content Include="Template\js\jquery.flexslider.js" />
+    <Content Include="Template\js\jquery.imagesloaded.min.js" />
+    <Content Include="Template\js\jquery.isotope.min.js" />
+    <Content Include="Template\js\jquery.magnific-popup.min.js" />
+    <Content Include="Template\js\jquery.migrate.js" />
+    <Content Include="Template\js\jquery.min.js" />
+    <Content Include="Template\js\jquery.themepunch.revolution.min.js" />
+    <Content Include="Template\js\jquery.themepunch.tools.min.js" />
+    <Content Include="Template\js\less.js" />
+    <Content Include="Template\js\owl.carousel.min.js" />
+    <Content Include="Template\js\retina-1.1.0.min.js" />
+    <Content Include="Template\js\script.js" />
+    <Content Include="Template\projecting.html" />
+    <Content Include="Template\projects.html" />
+    <Content Include="Template\repairing.html" />
+    <Content Include="Template\roads.html" />
+    <Content Include="Template\scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Template\scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Template\services.html" />
+    <Content Include="Template\single-post.html" />
+    <Content Include="Template\single-project.html" />
+    <Content Include="Template\upload\banners\1.jpg" />
+    <Content Include="Template\upload\blog\1.jpg" />
+    <Content Include="Template\upload\blog\2.jpg" />
+    <Content Include="Template\upload\blog\news1.jpg" />
+    <Content Include="Template\upload\blog\news2.jpg" />
+    <Content Include="Template\upload\blog\news3.jpg" />
+    <Content Include="Template\upload\flickr\1.jpg" />
+    <Content Include="Template\upload\flickr\2.jpg" />
+    <Content Include="Template\upload\flickr\3.jpg" />
+    <Content Include="Template\upload\flickr\4.jpg" />
+    <Content Include="Template\upload\flickr\5.jpg" />
+    <Content Include="Template\upload\flickr\6.jpg" />
+    <Content Include="Template\upload\others\1.jpg" />
+    <Content Include="Template\upload\others\2.jpg" />
+    <Content Include="Template\upload\others\3.jpg" />
+    <Content Include="Template\upload\others\4.jpg" />
+    <Content Include="Template\upload\others\5.jpg" />
+    <Content Include="Template\upload\others\6.jpg" />
+    <Content Include="Template\upload\others\7.jpg" />
+    <Content Include="Template\upload\others\about.jpg" />
+    <Content Include="Template\upload\others\energy.jpg" />
+    <Content Include="Template\upload\others\gard.jpg" />
+    <Content Include="Template\upload\others\gard2.jpg" />
+    <Content Include="Template\upload\others\maintanance.jpg" />
+    <Content Include="Template\upload\others\ScreenShots\5.jpg" />
+    <Content Include="Template\upload\portfolio\1.jpg" />
+    <Content Include="Template\upload\portfolio\2.jpg" />
+    <Content Include="Template\upload\portfolio\3.jpg" />
+    <Content Include="Template\upload\portfolio\4.jpg" />
+    <Content Include="Template\upload\portfolio\5.jpg" />
+    <Content Include="Template\upload\portfolio\6.jpg" />
+    <Content Include="Template\upload\portfolio\a.jpg" />
+    <Content Include="Template\upload\portfolio\b.jpg" />
+    <Content Include="Template\upload\portfolio\c.jpg" />
+    <Content Include="Template\upload\portfolio\d.jpg" />
+    <Content Include="Template\upload\portfolio\e.jpg" />
+    <Content Include="Template\upload\portfolio\f.jpg" />
+    <Content Include="Template\upload\slide\1.jpg" />
+    <Content Include="Template\upload\slide\2.jpg" />
+    <Content Include="Template\upload\slide\3.jpg" />
+    <Content Include="Template\upload\slide\ScreenShots\1.jpg" />
+    <Content Include="Template\upload\slide\ScreenShots\2.jpg" />
+    <Content Include="Template\upload\team\1.jpg" />
+    <Content Include="Template\upload\team\2.jpg" />
+    <Content Include="Template\upload\team\3.jpg" />
+    <Content Include="Template\upload\team\4.jpg" />
+    <Content Include="Template\upload\team\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Template\contact.php" />
+    <Content Include="Template\css\fonts\fontawesome-webfont.eot" />
+    <Content Include="Template\css\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Template\css\fonts\fontawesome-webfont.woff" />
+    <Content Include="Template\css\fonts\FontAwesome.otf" />
+    <Content Include="Template\less\style.less" />
+    <Content Include="Template\less\variables.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60823</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8000/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

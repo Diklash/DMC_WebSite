@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    var selection = CurrentPage;
+
+    var currentLocale = System.Threading.Thread.CurrentThread.CurrentCulture;
+
+    bool done = true;
+}
+
+@if (currentLocale.Name == "he-IL")
+{
+    <link rel="stylesheet" type="text/css" href="/css/right-to-left.css" media="screen" />
+}

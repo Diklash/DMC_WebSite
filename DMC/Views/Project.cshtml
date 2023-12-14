@@ -1,0 +1,78 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.ProjectPage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "InnerPage.cshtml";
+}
+
+<!-- single-page section ================================================== -->
+		<section class="single-page-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<img src="@Umbraco.Media(Model.Content.GetProperty("Image1").Value.ToString()).url" alt="">
+						<img src="@Umbraco.Media(Model.Content.GetProperty("Image2").Value.ToString()).url" alt="">
+					</div>
+					<div class="col-md-5">
+						<div class="project-content">
+
+							<h2>@Umbraco.Field("projectDetailsHeader1")</h2>
+
+                            @Umbraco.Field("projectDetailsContent1")
+
+							<div class="project-tags">
+								<ul>
+									<li><i class="fa fa-calendar"></i> <span>Date:</span> @Umbraco.Field("date", formatAsDate: true)</li>
+									<li><i class="fa fa-map-marker"></i> <span>Location:</span> @Umbraco.Field("location")</li>
+									<li><i class="fa fa-usd"></i> <span>Value:</span> @Umbraco.Field("value")</li>
+									<li><i class="fa fa-tag"></i> <span>Category:</span> @Umbraco.Field("category")</li>
+									<li><i class="fa fa-user"></i> <span>Investor:</span> @Umbraco.Field("investor")</li>
+								</ul>
+							</div>
+								
+                            <h2>@Umbraco.Field("projectDetailsHeader2")</h2>
+
+                            @Umbraco.Field("projectDetailsContent2")
+								
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End single-page section -->
+
+		<!-- portfolio-section 
+			================================================== -->
+		<section class="portfolio-section">
+			<div class="container">
+
+				<div class="portfolio-box owl-wrapper">
+					<div class="owl-carousel" data-num="3">
+					
+                        @if (Model.Content.HasValue("GalleryImages"))
+                        {
+
+                            foreach (var item in Model.Content.GetProperty("GalleryImages").Value.ToString().Split(','))
+                            {
+                                var image = Umbraco.Media(int.Parse(item));
+
+                                <div class="item project-post">
+                                    <div class="project-gallery">
+                                        <img src="@image.url" alt="">
+                                        <div class="hover-box">
+                                            <div class="inner-hover">
+                                                <h2><a href="single-project.html">Single Project Title</a></h2>
+                                                <span>interior</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+
+                        }
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- End portfolio section -->

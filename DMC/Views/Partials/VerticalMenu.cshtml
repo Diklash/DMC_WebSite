@@ -1,0 +1,71 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@*
+    This snippet shows how simple it is to fetch only children of a certain Document Type using Razor.
+    Be sure to change "DocumentTypeAlias" below to match your needs, such as "TextPage" or "NewsItems".
+    (You can find the alias of your Document Type by editing it in the Settings section)
+*@
+@{  
+    var parentPage = CurrentPage.Parent;
+
+    Umbraco.Web.Models.DynamicPublishedContentList selection2 = new Umbraco.Web.Models.DynamicPublishedContentList();
+    if (parentPage.DocumentTypeAlias == "homePage") // CurrentPage is a basepage with subMenu children
+    {
+        //var basePageAliasName = CurrentPage.DocumentTypeAlias;
+        //Umbraco.Web.Models.DynamicPublishedContentList mainMenuItems = parentPage.Children; //Get main menu items
+        //List<Umbraco.Web.Models.DynamicPublishedContent> basePageMenu = mainMenuItems.Where(A => A.DocumentTypeAlias == basePageAliasName).ToList();
+        //selection = basePageMenu.First().Children;
+
+        Umbraco.Web.Models.DynamicPublishedContentList mainMenuItems = CurrentPage.Children;
+        selection2 = mainMenuItems;//.Skip(1).ToList();
+
+
+
+    }
+
+    var selection = (selection2.Any() ? selection2 : parentPage.Children) ;
+    selection.Remove(selection.First());
+}
+@*
+    As an example of more querying, if you have a true/false property with the alias of shouldBeFeatured:
+    var selection= CurrentPage.Children("DocumentTypeAlias").Where("shouldBeFeatured == true").Where("Visible");
+*@
+
+@if (selection.Any())
+{
+    
+    <div class="col-md-3">
+        <div class="services-tabs">
+            <ul>
+                @*<li>
+                    <a href="@parentPage.Url">@parentPage.Title</a>
+                </li>*@
+
+                @foreach (var item in selection)
+                {
+                    string active = item.IsAncestorOrSelf(CurrentPage) ? "active" : string.Empty;
+
+                    if (CurrentPage.Name == "About" && item.Name == "AboutCompany")
+                    {
+                        active = "active";
+                    }
+                    <li class="@active">
+                        @{
+                            if (item.Name == "OurTeam"){
+                                string url = item.Url + "#exactline";
+                                <a href=@url>@item.Description</a>
+                            }
+                            else{
+                                <a href="@item.Url">@item.Description</a>
+                            }
+                        }
+                        
+                    </li>
+                }
+
+
+
+            </ul>
+        </div>
+    </div>
+}

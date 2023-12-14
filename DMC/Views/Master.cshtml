@@ -1,0 +1,286 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+
+<!doctype htmlportfolio-section
+
+<html lang="en" class="no-js">
+<head>
+	<title>Construct</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:300,400,700' rel='stylesheet' type='text/css'>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" media="screen">	
+	<link rel="stylesheet" type="text/css" href="/css/jquery.bxslider.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="/css/owl.theme.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="/css/font-awesome.css" media="screen">
+
+    <!-- REVOLUTION BANNER CSS SETTINGS -->
+	<link rel="stylesheet" type="text/css" href="/css/settings.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen">
+    @*<link rel="stylesheet" type="text/css" href="/css/right-to-left.css" media="screen" />*@
+    
+    @{ Html.RenderPartial("CssSwitcher"); }
+        
+</head>
+
+<body runat="server">
+	<!-- Container -->
+	<div id="container">
+		<!-- Header
+		    ================================================== -->
+		<header class="clearfix">
+			<nav class="navbar navbar-default" role="navigation" style="z-index: 1030;"> <!--navbar-fixed-top -->
+				<div class="top-line">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-8">
+								<ul class="info-list">
+									<li>
+										<i class="fa fa-phone"></i>
+										@Umbraco.Field("#Call us"):
+										<span>05-9121874</span>
+									</li>
+									<li>
+										<i class="fa fa-envelope-o"></i>
+										@Umbraco.Field("#Email us"):
+										<span>doron@d-m-c.co.il</span>
+									</li>
+									<li>
+										<i class="fa fa-clock-o"></i>
+										@Umbraco.Field("#Work hours"):
+										<span>08:00 - 17:00</span>
+									</li>
+                                    
+								</ul>
+							</div>	
+							<div class="col-md-4">
+								<ul class="social-icons">
+									<li><a class="facebook" href="https://www.facebook.com/doron.menashe?fref=ts" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a class="rss" href="#"><i class="fa fa-rss"></i></a></li>
+									<li><a class="google" href="#"><i class="fa fa-google-plus"></i></a></li>
+									<li><a class="linkedin" href="https://www.linkedin.com/in/doron-menashe-2b5815113/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+									<li><a class="pinterest" href="#"><i class="fa fa-pinterest"></i></a></li>
+                                    <li style="color:yellow;">
+                                        <a id="heb" class="heb" style="color:orangered;" href="/">Heb</a>&nbsp;
+                                        <a id="eng" class="eng" style="color:yellow;" href="/en/">Eng</a>
+                                    </li>
+
+                                    @*<li>
+                                        <form class="lanuage" runat="server">
+                                            <asp:Button ID="btnlang" runat="server" CssClass="language_button" OnClick="lnkButton_Click" Width="80px" />
+                                        </form>
+                                    </li>*@
+								</ul>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="/"><img src="/images/DMC_logo.jpg" alt=""></a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							
+							@{ Html.RenderPartial("MainMenu"); }
+
+										
+							<li class="search"><a href="#" class="open-search"><i class="fa fa-search"></i></a>
+								<form class="form-search">
+									<input type="search" placeholder="Search:"/>
+									<button type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+								</form>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</header>
+		<!-- End Header -->
+											
+   		@RenderBody();
+									
+		<!-- footer 
+			================================================== -->
+		<footer>
+			<div class="container">
+				<div class="footer-widgets">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="widgets">
+								<h2>About us</h2>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+								<p>Reprehenderit in voluptate velit esse cillum nulla pariatur.</p>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="widgets">
+								<h2>Tags</h2>
+								<ul class="tag-list">
+									<li><a href="#">ביצוע</a></li>
+									<li><a href="#">קבלן ביצוע</a></li>
+									<li><a href="#">קבלן בניין</a></li>
+									<li><a href="#">בניית וילות</a></li>
+									<li><a href="#">מהנדס בניין</a></li>
+									<li><a href="#">הנדסה</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="widgets">
+								<h2>Flickr widget</h2>
+								<ul class="flickr-list">
+									<li><a href="#"><img src="/upload/flickr/1.jpg" alt=""/></a></li>
+									<li><a href="#"><img src="/upload/flickr/2.jpg" alt=""/></a></li>
+									<li><a href="#"><img src="/upload/flickr/3.jpg" alt=""/></a></li>
+									<li><a href="#"><img src="/upload/flickr/4.jpg" alt=""/></a></li>
+									<li><a href="#"><img src="/upload/flickr/5.jpg" alt=""/></a></li>
+									<li><a href="#"><img src="/upload/flickr/6.jpg" alt=""/></a></li>
+									<li><a href="#"><img src="/upload/flickr/1.jpg" alt=""/></a></li>
+									<li><a href="#"><img src="/upload/flickr/2.jpg" alt=""/></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="widgets info-widget">
+								<h2>Working Hours</h2>
+								<p class="first-par">You can contact or visit us during working time.</p>
+								<p><span>Tel: </span> 1234 - 5678 - 9012</p>
+								<p><span>Email: </span> nunforest@gmail.com</p>
+								<p><span>Working Hours: </span> 8:00 a.m - 17:00 a.m</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="last-line">
+				<div class="container">
+					<p class="copyright">
+						&copy; DMC by "Dikla-Web". All rights reserved.
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!-- End footer -->
+
+	</div>
+	<!-- End Container -->
+	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.migrate.js"></script>
+	<script type="text/javascript" src="/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.imagesloaded.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.isotope.min.js"></script>
+	<script type="text/javascript" src="/js/retina-1.1.0.min.js"></script>
+    <!-- SLIDER REVOLUTION 4.x SCRIPTS  -->
+    <script type="text/javascript" src="/js/jquery.themepunch.tools.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.themepunch.revolution.min.js"></script>
+    @*<script type="text/javascript" src="/js/gmap3.min.js"></script>*@
+    @*<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>*@
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDFQmwO_MIe7YH1YhBIyu6smIt49R3kzCU&callback=initMap"></script>
+	
+	<script type="text/javascript" src="/js/script.js"></script>
+
+
+	<!-- Revolution slider -->
+    <script type="text/javascript">
+
+		jQuery(document).ready(function() {
+
+		    var url = window.location.href;
+		    if (url.indexOf("/en/") < 0)  //which mean hebrew
+		    {
+		        $('head').append('<link rel="stylesheet" href="../css/right-to-left.css" type="text/css" />');
+		    }
+
+
+			jQuery('.tp-banner').show().revolution(
+			{
+				dottedOverlay:"none",
+				delay:10000,
+				startwidth:1140,
+				startheight:570,
+				hideThumbs:200,
+				thumbWidth:100,
+				thumbHeight:50,
+				thumbAmount:5,
+				navigationType:"none",
+				navigationArrows:"",
+				touchenabled:"on",
+				onHoverStop:"off",
+				swipe_velocity: 0.7,
+				swipe_min_touches: 1,
+				swipe_max_touches: 1,
+				drag_block_vertical: false,
+				parallax:"mouse",
+				parallaxBgFreeze:"on",
+				parallaxLevels:[7,4,3,2,5,4,3,2,1,0],
+				keyboardNavigation:"off",
+				navigationHAlign:"center",
+				navigationVAlign:"bottom",
+				navigationHOffset:0,
+				navigationVOffset:60,
+				shadow:0,
+				spinner:"spinner4",
+				stopLoop:"off",
+				stopAfterLoops:-1,
+				stopAtSlide:-1,
+				shuffle:"off",
+				autoHeight:"off",
+				forceFullWidth:"off",
+				hideThumbsOnMobile:"off",
+				hideNavDelayOnMobile:1500,
+				hideBulletsOnMobile:"off",
+				hideArrowsOnMobile:"off",
+				hideThumbsUnderResolution:0,
+				hideSliderAtLimit:0,
+				hideCaptionAtLimit:0,
+				hideAllCaptionAtLilmit:0,
+				startWithSlide:0,
+				fullScreenOffsetContainer: ".header"
+			});
+
+			
+			
+
+			//function setlanguseCss(isHeb) {
+			//    if (isHeb) {
+			//        if (!$("link[href='/css/right-to-left.css']").length) {
+			//            //add
+			//            $('<link href="/css/right-to-left.css" rel="stylesheet">').appendTo("head");
+			//        }
+			//    }
+			//    else {
+			//        if ($("link[href='/css/right-to-left.css']").length) {
+			//            //remove
+			//            $('<link href="/css/right-to-left.css" rel="stylesheet">').remove();
+			//        }
+			//    }
+			//}
+		});
+
+		
+	</script>
+</body>
+</html>

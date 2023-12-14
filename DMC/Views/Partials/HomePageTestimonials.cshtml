@@ -1,0 +1,44 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+
+@*
+    This snippet shows how simple it is to fetch only children of a certain Document Type using Razor.
+    Be sure to change "DocumentTypeAlias" below to match your needs, such as "TextPage" or "NewsItems".
+    (You can find the alias of your Document Type by editing it in the Settings section)
+*@
+
+@{
+
+    var testimonialsPage = CurrentPage.Children("Testimonials")[0];
+
+    var selection = testimonialsPage!=null ? testimonialsPage.Children.Where("ShowOnHomePage") : null;
+
+    bool done = true;
+
+}
+@*
+    As an example of more querying, if you have a true/false property with the alias of shouldBeFeatured:
+    var selection= CurrentPage.Children("DocumentTypeAlias").Where("shouldBeFeatured == true").Where("Visible");
+*@
+
+
+@if (selection != null && selection.Any())
+{
+		<section class="testimonial-section">
+			<div class="container">
+				<div class="testimonial-box">
+					<ul class="bxslider">
+						 @foreach (var item in selection)
+        				{	
+							<li>
+								<h2>@item.CustomerName</h2>
+								<span>@item.CustomerPosition</span>
+								<p>@item.CustomerOpinion</p>
+							</li>
+						}
+					</ul>
+				</div>
+
+			</div>
+		</section>
+}

@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.AboutPage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "InnerPage.cshtml";
+}
+
+		<!-- about section ================================================== -->
+	    <section class="services-section">
+        <div class="container">
+            <div class="services-box">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="services-post">
+                                    <img src="@Umbraco.Media(Model.Content.GetProperty("Image").Value.ToString()).url" alt="">
+                                    <div class="services-content">
+                                        <h2>@Umbraco.Field("HeaderTittle")</h2>
+                                        @Umbraco.Field("AboutContent")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @{ Html.RenderPartial("VerticalMenu"); }
+                </div>
+            </div>
+        </div>
+    </section>
+		<!-- End about section -->
+
+@{ Html.RenderPartial("TeamMember"); }
+

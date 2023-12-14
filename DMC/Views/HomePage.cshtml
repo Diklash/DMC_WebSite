@@ -1,0 +1,379 @@
+﻿@*@using ContentModels = Umbraco.Web.PublishedContentModels;*@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.HomePage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+
+		<!-- home-section 
+			================================================== -->
+		<section id="home-section" class="slider1">
+			
+            @{ Html.RenderPartial("HomePageBanners"); }
+			
+		</section>
+		<!-- End home section -->
+
+		<!-- banner-section 
+			================================================== -->
+		<section class="banner-section">
+			<div class="container">
+				<h2>Construct is made with greatest page builder &amp; most sold in codecanyon <a href="#" class="button-one">Buy this theme</a></h2>
+			</div>
+		</section>
+		<!-- End banner section -->
+
+		<!-- services-section 
+			================================================== -->
+		<section class="services-section">
+			<div class="container">
+				<div class="services-box">
+					<div class="row">
+
+						<div class="col-md-3">
+							<div class="services-post">
+								<img src="/upload/others/ScreenShots/5.jpg" alt="">
+								<div class="services-content">
+									<h2>Elegant Garden</h2>
+									<p>Aenean sed justo tincidunt, vulputate nisi sit amet, rutrum ligula. Pellentesque dictum aliquam ornare. Sed elit lectus.</p>
+									<a href="garden.html">Read More <i class="fa fa-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="services-post">
+								<img src="/upload/others/2.jpg" alt="">
+								<div class="services-content">
+									<h2>Small &amp; Large Building</h2>
+									<p>Aenean sed justo tincidunt, vulputate nisi sit amet, rutrum ligula. Pellentesque dictum aliquam ornare. Sed elit lectus.</p>
+									<a href="buildings.html">Read More <i class="fa fa-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="services-post">
+								<img src="/upload/others/3.jpg" alt="">
+								<div class="services-content">
+									<h2>Perfect Plans &amp; Projecting</h2>
+									<p>Aenean sed justo tincidunt, vulputate nisi sit amet, rutrum ligula. Pellentesque dictum aliquam ornare. Sed elit lectus.</p>
+									<a href="projecting.html">Read More <i class="fa fa-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="services-post">
+								<img src="/upload/others/4.jpg" alt="">
+								<div class="services-content">
+									<h2>Electricy installation</h2>
+									<p>Aenean sed justo tincidunt, vulputate nisi sit amet, rutrum ligula. Pellentesque dictum aliquam ornare. Sed elit lectus.</p>
+									<a href="projecting.html">Read More <i class="fa fa-angle-right"></i></a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- End services section -->
+
+		<!-- portfolio-section -->
+
+        <section class="portfolio-section">
+            <div class="container">
+                <ul class="filter">
+                    <li><a class="active" href="#" data-filter="*"><i class="fa fa-th-list"></i> All</a></li>
+                    <li><a href="#" data-filter=".buildings">Buildings</a></li>
+                    <li><a href="#" data-filter=".interior">Interior</a></li>
+                    <li><a href="#" data-filter=".construction">Construction</a></li>
+                </ul>
+                <div class="portfolio-box iso-call">
+                    @{ Html.RenderPartial("ProjectGalleryItem"); }
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+		<!---	================================================== -->
+		@*<section class="portfolio-section" style="direction:ltr">
+			<div class="container">
+				<div class="portfolio-box owl-wrapper">
+					<div class="owl-carousel" data-num="4">
+					
+						<div class="item project-post">
+							<div class="project-gallery">
+								<img src="/upload/portfolio/1.jpg" alt="">
+								<div class="hover-box">
+									<div class="inner-hover">
+										<h2><a href="single-project.html">Single Project Title</a></h2>
+										<span>interior</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+						<div class="item project-post">
+							<div class="project-gallery">
+								<img src="/upload/portfolio/2.jpg" alt="">
+								<div class="hover-box">
+									<div class="inner-hover">
+										<h2><a href="single-project.html">Single Project Title</a></h2>
+										<span>building</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+						<div class="item project-post">
+							<div class="project-gallery">
+								<img src="/upload/portfolio/3.jpg" alt="">
+								<div class="hover-box">
+									<div class="inner-hover">
+										<h2><a href="single-project.html">Single Project Title</a></h2>
+										<span>construction</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+						<div class="item project-post">
+							<div class="project-gallery">
+								<img src="/upload/portfolio/4.jpg" alt="">
+								<div class="hover-box">
+									<div class="inner-hover">
+										<h2><a href="single-project.html">Single Project Title</a></h2>
+										<span>house</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+						<div class="item project-post">
+							<div class="project-gallery">
+								<img src="/upload/portfolio/5.jpg" alt="">
+								<div class="hover-box">
+									<div class="inner-hover">
+										<h2><a href="single-project.html">Single Project Title</a></h2>
+										<span>architecture</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section>*@
+		<!-- End portfolio section -->
+
+		<!-- tabs-section 
+			================================================== -->
+		<section class="tabs-section">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-7">
+						<div class="about-us-box">
+							<h1>about us and our priorities</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat.</p>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="about-us-post">
+										<a href="#"><i class="fa fa-building-o"></i></a>
+										<h2>Construction</h2>
+										<span>build homes</span>
+									</div>
+									<div class="about-us-post">
+										<a href="#"><i class="fa fa-cogs"></i></a>
+										<h2>Maintanance</h2>
+										<span>energy repair</span>
+									</div>
+									<div class="about-us-post">
+										<a href="#"><i class="fa fa-desktop"></i></a>
+										<h2>Good Planning</h2>
+										<span>architecture</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="about-us-post">
+										<a href="#"><i class="fa fa-desktop"></i></a>
+										<h2>Good Planning</h2>
+										<span>architecture</span>
+									</div>
+									<div class="about-us-post">
+										<a href="#"><i class="fa fa-users"></i></a>
+										<h2>Awesome Stuff</h2>
+										<span>1000+ workers</span>
+									</div>
+									<div class="about-us-post">
+										<a href="#"><i class="fa fa-building-o"></i></a>
+										<h2>Construction</h2>
+										<span>build homes</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-5">
+						
+						<div class="about-box">
+							<img src="/upload/others/about.jpg" alt="">
+							<h2>Who we are</h2>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint.</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- End tabs section -->
+
+
+        @{ Html.RenderPartial("TeamMember"); }
+
+
+		<!-- news-section 
+			================================================== -->
+		@*<section class="news-section" style="direction:ltr">
+			<div class="container">
+
+				<div class="news-box owl-wrapper">
+					<div class="owl-carousel" data-num="4">
+					
+						<div class="item news-post">
+							<div class="news-gallery">
+								<img src="/upload/blog/news1.jpg" alt="">
+								<div class="date-post">
+									<p>June <span>15</span></p>
+								</div>
+							</div>
+							<div class="news-content">
+								<h2><a href="single-post.html">Our News post 1</a></h2>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur.</p>
+								<a href="single-post.html">Read More <i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+					
+						<div class="item news-post">
+							<div class="news-gallery">
+								<img src="/upload/blog/news2.jpg" alt="">
+								<div class="date-post">
+									<p>June <span>17</span></p>
+								</div>
+							</div>
+							<div class="news-content">
+								<h2><a href="single-post.html">Our News post 2</a></h2>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur.</p>
+								<a href="single-post.html">Read More <i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+					
+						<div class="item news-post">
+							<div class="news-gallery">
+								<img src="/upload/blog/news3.jpg" alt="">
+								<div class="date-post">
+									<p>June <span>20</span></p>
+								</div>
+							</div>
+							<div class="news-content">
+								<h2><a href="single-post.html">Our News post 3</a></h2>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur.</p>
+								<a href="single-post.html">Read More <i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+					
+						<div class="item news-post">
+							<div class="news-gallery">
+								<img src="/upload/blog/news1.jpg" alt="">
+								<div class="date-post">
+									<p>July <span>15</span></p>
+								</div>
+							</div>
+							<div class="news-content">
+								<h2><a href="single-post.html">Our News post 4</a></h2>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur.</p>
+								<a href="single-post.html">Read More <i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+					
+						<div class="item news-post">
+							<div class="news-gallery">
+								<img src="/upload/blog/news2.jpg" alt="">
+								<div class="date-post">
+									<p>July <span>15</span></p>
+								</div>
+							</div>
+							<div class="news-content">
+								<h2><a href="single-post.html">Our News post 5</a></h2>
+								<p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum dolore eu fugiat nulla pariatur..</p>
+								<a href="single-post.html">Read More <i class="fa fa-angle-right"></i></a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</section>*@
+		<!-- End news section -->
+
+		<!-- testimonial-section 
+			================================================== -->
+		
+		@{ Html.RenderPartial("HomePageTestimonials"); }
+
+		<!-- End testimonial section -->
+
+		<!-- quote-section 
+			================================================== -->
+		<section class="quote-section">
+
+			<div id="map"></div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-5 col-sm-offset-7">
+						
+						<div class="quote-box">
+							<h1>Free quote to contact us</h1>
+
+							<form id="contact-form">
+								<input name="name" id="name" type="text" placeholder="Name">
+								<input name="mail" id="mail" type="text" placeholder="Email">
+								<input name="tel-number" id="tel-number" type="text" placeholder="Phone">
+								<textarea name="comment" id="comment" placeholder="Message"></textarea>
+								<input type="submit" id="submit_contact" value="Send Message">
+								<div id="msg" class="message"></div>
+							</form>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<!-- End quote section -->
+
+		
